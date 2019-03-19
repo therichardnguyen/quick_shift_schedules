@@ -22,6 +22,7 @@
 		27CCE63C224075A100BA9596 /* NewShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE63B224075A100BA9596 /* NewShiftViewController.swift */; };
 		27CCE63E2240803800BA9596 /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE63D2240803800BA9596 /* EmployeeTableViewController.swift */; };
 		27CCE6402240818600BA9596 /* ShiftColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE63F2240818600BA9596 /* ShiftColorTableViewController.swift */; };
+		27CCE6422240923700BA9596 /* ShiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE6412240923700BA9596 /* ShiftTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		27CCE63B224075A100BA9596 /* NewShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewShiftViewController.swift; path = "Homebase Client Engineering Question/Controllers/NewShiftViewController.swift"; sourceTree = "<group>"; };
 		27CCE63D2240803800BA9596 /* EmployeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmployeeTableViewController.swift; path = "Homebase Client Engineering Question/Controllers/EmployeeTableViewController.swift"; sourceTree = "<group>"; };
 		27CCE63F2240818600BA9596 /* ShiftColorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShiftColorTableViewController.swift; path = "Homebase Client Engineering Question/Controllers/ShiftColorTableViewController.swift"; sourceTree = "<group>"; };
+		27CCE6412240923700BA9596 /* ShiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShiftTableViewCell.swift; path = Views/ShiftTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				27CCE5F92240675600BA9596 /* AppDelegate.swift */,
 				27CCE637224071EF00BA9596 /* ShiftsTableViewController.swift */,
+				27CCE6412240923700BA9596 /* ShiftTableViewCell.swift */,
 				27CCE6392240721200BA9596 /* UIViewConvenience.swift */,
 				27CCE5FB2240675600BA9596 /* HomeViewController.swift */,
 				27CCE629224067EA00BA9596 /* StorageManager.swift */,
@@ -283,6 +286,7 @@
 				27CCE62A224067EA00BA9596 /* StorageManager.swift in Sources */,
 				27CCE62F2240691A00BA9596 /* DateFormatters.swift in Sources */,
 				27CCE63E2240803800BA9596 /* EmployeeTableViewController.swift in Sources */,
+				27CCE6422240923700BA9596 /* ShiftTableViewCell.swift in Sources */,
 				27CCE62D2240681B00BA9596 /* Homebase.xcdatamodeld in Sources */,
 				27CCE63622406D1A00BA9596 /* ApiManager.swift in Sources */,
 				27CCE63C224075A100BA9596 /* NewShiftViewController.swift in Sources */,
