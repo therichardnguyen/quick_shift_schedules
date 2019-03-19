@@ -65,7 +65,7 @@ class ShiftsTableViewController: UITableViewController {
     
     private lazy var fetchedResultsController: NSFetchedResultsController<Shift> = {
         let fetchRequest: NSFetchRequest<Shift> = Shift.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Shift.startDate, ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Shift.startDate, ascending: false)]
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest,
                                              managedObjectContext: StorageManager.main.context,
                                              sectionNameKeyPath: nil,
