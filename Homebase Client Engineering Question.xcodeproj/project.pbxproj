@@ -14,6 +14,7 @@
 		27CCE61A2240675800BA9596 /* Homebase_Client_Engineering_QuestionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE6192240675800BA9596 /* Homebase_Client_Engineering_QuestionUITests.swift */; };
 		27CCE62A224067EA00BA9596 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE629224067EA00BA9596 /* StorageManager.swift */; };
 		27CCE62D2240681B00BA9596 /* Homebase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE62B2240681B00BA9596 /* Homebase.xcdatamodeld */; };
+		27CCE63422406BBF00BA9596 /* shifts.json in Resources */ = {isa = PBXBuildFile; fileRef = 27CCE63322406BBF00BA9596 /* shifts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		27CCE61B2240675800BA9596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CCE629224067EA00BA9596 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageManager.swift; path = Services/StorageManager.swift; sourceTree = "<group>"; };
 		27CCE62C2240681B00BA9596 /* Homebase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homebase.xcdatamodel; sourceTree = "<group>"; };
+		27CCE63322406BBF00BA9596 /* shifts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = shifts.json; path = Resources/shifts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		27CCE5ED2240675600BA9596 = {
 			isa = PBXGroup;
 			children = (
+				27CCE63322406BBF00BA9596 /* shifts.json */,
 				27CCE5F82240675600BA9596 /* Homebase Client Engineering Question */,
 				27CCE60D2240675800BA9596 /* Homebase Client Engineering QuestionTests */,
 				27CCE6182240675800BA9596 /* Homebase Client Engineering QuestionUITests */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CCE63422406BBF00BA9596 /* shifts.json in Resources */,
 				27CCE6012240675800BA9596 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
