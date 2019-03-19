@@ -89,9 +89,9 @@ class StorageManager {
     func save(managedObjectContext: NSManagedObjectContext, success: (() -> Void)?, failure: ((Error) -> Void)?) {
         do {
             try managedObjectContext.save()
-            managedObjectContext.performAndWait {
+            context.performAndWait {
                 do {
-                    try managedObjectContext.save()
+                    try context.save()
                     success?()
                 } catch {
                     failure?(error)
@@ -105,7 +105,15 @@ class StorageManager {
     }
     
     func save(success: (() -> Void)?, failure: ((Error) -> Void)?) {
-        save(managedObjectContext: context, success: success, failure: failure)
+        context.performAndWait {
+            do {
+                try context.save()
+                success?()
+            } catch {
+                failure?(error)
+                print("Failure to save context: \(error)")
+            }
+        }
     }
     
 }
