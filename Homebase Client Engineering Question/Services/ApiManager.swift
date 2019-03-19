@@ -33,7 +33,6 @@ class APIManager {
                         shift.startDate = Formatter.date.api.date(from: startDate)
                     }
                     shift.color = shiftData["color"]
-                    print(shift)
                 }
             }
             StorageManager.main.save(success: { print("Successfully saved") }, failure: { error in print("Failed to save: \(error)") })
