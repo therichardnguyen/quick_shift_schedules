@@ -40,7 +40,8 @@ class HomeViewController: UIViewController {
     }
     
     @objc func openAddModal() {
-
+        let controller = UINavigationController(rootViewController: NewShiftViewController())
+        present(controller, animated: true, completion: nil)
     }
 
     private let shiftList = ShiftsTableViewController()
