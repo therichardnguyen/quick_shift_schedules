@@ -17,4 +17,20 @@ struct Formatter {
             return formatter
         }()
     }
+    
+    struct shiftList {
+        static let startInterval: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "E, MMMM d h-"
+            formatter.timeZone = TimeZone.autoupdatingCurrent
+            return formatter
+        }()
+        
+        static let endInterval: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "h a"
+            formatter.timeZone = TimeZone.autoupdatingCurrent
+            return formatter
+        }()
+    }
 }
