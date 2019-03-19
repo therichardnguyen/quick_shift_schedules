@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27CCE5FA2240675600BA9596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE5F92240675600BA9596 /* AppDelegate.swift */; };
-		27CCE5FC2240675600BA9596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE5FB2240675600BA9596 /* ViewController.swift */; };
+		27CCE5FC2240675600BA9596 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE5FB2240675600BA9596 /* HomeViewController.swift */; };
 		27CCE6012240675800BA9596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CCE6002240675800BA9596 /* Assets.xcassets */; };
 		27CCE60F2240675800BA9596 /* Homebase_Client_Engineering_QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE60E2240675800BA9596 /* Homebase_Client_Engineering_QuestionTests.swift */; };
 		27CCE61A2240675800BA9596 /* Homebase_Client_Engineering_QuestionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE6192240675800BA9596 /* Homebase_Client_Engineering_QuestionUITests.swift */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		27CCE5F62240675600BA9596 /* Homebase Client Engineering Question.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homebase Client Engineering Question.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CCE5F92240675600BA9596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27CCE5FB2240675600BA9596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27CCE5FB2240675600BA9596 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		27CCE6002240675800BA9596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27CCE6052240675800BA9596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CCE60A2240675800BA9596 /* Homebase Client Engineering QuestionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Homebase Client Engineering QuestionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				27CCE5F92240675600BA9596 /* AppDelegate.swift */,
-				27CCE5FB2240675600BA9596 /* ViewController.swift */,
+				27CCE5FB2240675600BA9596 /* HomeViewController.swift */,
 				27CCE629224067EA00BA9596 /* StorageManager.swift */,
 				27CCE62B2240681B00BA9596 /* Homebase.xcdatamodeld */,
 				27CCE62E2240691A00BA9596 /* DateFormatters.swift */,
@@ -268,7 +268,7 @@
 				27CCE62F2240691A00BA9596 /* DateFormatters.swift in Sources */,
 				27CCE62D2240681B00BA9596 /* Homebase.xcdatamodeld in Sources */,
 				27CCE63622406D1A00BA9596 /* ApiManager.swift in Sources */,
-				27CCE5FC2240675600BA9596 /* ViewController.swift in Sources */,
+				27CCE5FC2240675600BA9596 /* HomeViewController.swift in Sources */,
 				27CCE5FA2240675600BA9596 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
