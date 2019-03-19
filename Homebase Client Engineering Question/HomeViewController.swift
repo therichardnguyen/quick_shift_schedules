@@ -12,9 +12,27 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        APIManager.fetchShifts()
+        setupViews()
     }
 
+    func setupViews() {
+        let shiftView = shiftList.tableView!
+        let subviews = ["list": shiftView]
+        
+        view.add(keyedViewsForAutolayout: subviews)
+        addChild(shiftList)
+        shiftList.didMove(toParent: self)
+        NSLayoutConstraint.activate([
+            shiftView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            shiftView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            shiftView.topAnchor.constraint(equalTo: view.topAnchor),
+            shiftView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
+        ])
+    }
+    
+    private let shiftList = ShiftsTableViewController()
 }
 

@@ -17,6 +17,7 @@
 		27CCE62F2240691A00BA9596 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE62E2240691A00BA9596 /* DateFormatters.swift */; };
 		27CCE63422406BBF00BA9596 /* shifts.json in Resources */ = {isa = PBXBuildFile; fileRef = 27CCE63322406BBF00BA9596 /* shifts.json */; };
 		27CCE63622406D1A00BA9596 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE63522406D1A00BA9596 /* ApiManager.swift */; };
+		27CCE638224071EF00BA9596 /* ShiftsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE637224071EF00BA9596 /* ShiftsTableViewController.swift */; };
 		27CCE63A2240721200BA9596 /* UIViewConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE6392240721200BA9596 /* UIViewConvenience.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		27CCE62E2240691A00BA9596 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateFormatters.swift; path = Services/DateFormatters.swift; sourceTree = "<group>"; };
 		27CCE63322406BBF00BA9596 /* shifts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = shifts.json; path = Resources/shifts.json; sourceTree = "<group>"; };
 		27CCE63522406D1A00BA9596 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = Services/ApiManager.swift; sourceTree = "<group>"; };
+		27CCE637224071EF00BA9596 /* ShiftsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShiftsTableViewController.swift; path = Controllers/ShiftsTableViewController.swift; sourceTree = "<group>"; };
 		27CCE6392240721200BA9596 /* UIViewConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewConvenience.swift; path = Extensions/UIViewConvenience.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				27CCE5F92240675600BA9596 /* AppDelegate.swift */,
+				27CCE637224071EF00BA9596 /* ShiftsTableViewController.swift */,
 				27CCE6392240721200BA9596 /* UIViewConvenience.swift */,
 				27CCE5FB2240675600BA9596 /* HomeViewController.swift */,
 				27CCE629224067EA00BA9596 /* StorageManager.swift */,
@@ -272,6 +275,7 @@
 				27CCE62F2240691A00BA9596 /* DateFormatters.swift in Sources */,
 				27CCE62D2240681B00BA9596 /* Homebase.xcdatamodeld in Sources */,
 				27CCE63622406D1A00BA9596 /* ApiManager.swift in Sources */,
+				27CCE638224071EF00BA9596 /* ShiftsTableViewController.swift in Sources */,
 				27CCE5FC2240675600BA9596 /* HomeViewController.swift in Sources */,
 				27CCE5FA2240675600BA9596 /* AppDelegate.swift in Sources */,
 			);
