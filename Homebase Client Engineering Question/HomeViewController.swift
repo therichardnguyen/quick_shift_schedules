@@ -15,6 +15,12 @@ class HomeViewController: UIViewController {
         
         APIManager.fetchShifts()
         setupViews()
+        setupNavigationItem()
+    }
+    
+    func setupNavigationItem() {
+        navigationItem.title = "Shifts"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openAddModal))
     }
 
     func setupViews() {
@@ -33,6 +39,10 @@ class HomeViewController: UIViewController {
         ])
     }
     
+    @objc func openAddModal() {
+
+    }
+
     private let shiftList = ShiftsTableViewController()
 }
 
