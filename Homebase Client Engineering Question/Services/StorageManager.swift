@@ -25,7 +25,7 @@ class StorageManager {
         var name: String {
             switch self {
             case .persistent:
-                return Bundle.main.infoDictionary?[kCFBundleNameKey as String] as! String
+                return "Homebase"
             case .volatile:
                 return "Homebase"
             }
@@ -54,9 +54,10 @@ class StorageManager {
         
     }
     
-    private(set) static var main = StorageManager(type: .volatile)
+    private(set) static var main = StorageManager(type: .persistent)
     
     var context: NSManagedObjectContext
+    private var coordinator: NSPersistentStoreCoordinator
     
     var editingContext: NSManagedObjectContext {
         let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
@@ -69,11 +70,14 @@ class StorageManager {
             fatalError("Error initializing managed object for: \(type)")
         }
         
-        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
         context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         context.persistentStoreCoordinator = coordinator
         
         do {
+            if let storeUrl = type.storeUrl {
+                try coordinator.destroyPersistentStore(at: storeUrl, ofType: type.storeType, options: [:])
+            }
             try coordinator.addPersistentStore(ofType: type.storeType,
                                                configurationName: nil,
                                                at: type.storeUrl,
@@ -85,7 +89,7 @@ class StorageManager {
             fatalError("Error migrating store: \(error)")
         }
     }
-    
+
     func save(managedObjectContext: NSManagedObjectContext, success: (() -> Void)?, failure: ((Error) -> Void)?) {
         do {
             try managedObjectContext.save()
