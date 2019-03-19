@@ -68,7 +68,22 @@ class NewShiftViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Push if it's the .eployee or color
+        guard let section = Section(rawValue: indexPath.section) else { fatalError() }
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch section {
+        case .startDate, .endDate:
+            break
+        case .employee:
+            let controller = EmployeeTableViewController()
+            controller.delegate = self
+            navigationController?.pushViewController(controller, animated: true)
+        case .shiftColor:
+            let controller = ShiftColorTableViewController()
+            controller.delegate = self
+            navigationController?.pushViewController(controller, animated: true)
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -144,6 +159,24 @@ class NewShiftViewController: UITableViewController {
         return shift
     }()
 }
+
+extension NewShiftViewController: ShiftColorTableViewControllerDelegate {
+    func didSelect(color: String?) {
+        shift.color = color
+        navigationController?.popViewController(animated: true)
+        tableView.reloadData()
+    }
+}
+
+extension NewShiftViewController: EmployeeTableViewControllerDelegate {
+    func didSelectEmployee(name: String?, role: String?) {
+        shift.name = name
+        shift.role = role
+        navigationController?.popViewController(animated: true)
+        tableView.reloadData()
+    }
+}
+
 
 
 private class DateTimeCell: UITableViewCell {
