@@ -16,6 +16,7 @@
 		27CCE62D2240681B00BA9596 /* Homebase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE62B2240681B00BA9596 /* Homebase.xcdatamodeld */; };
 		27CCE62F2240691A00BA9596 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE62E2240691A00BA9596 /* DateFormatters.swift */; };
 		27CCE63422406BBF00BA9596 /* shifts.json in Resources */ = {isa = PBXBuildFile; fileRef = 27CCE63322406BBF00BA9596 /* shifts.json */; };
+		27CCE63622406D1A00BA9596 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE63522406D1A00BA9596 /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		27CCE62C2240681B00BA9596 /* Homebase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homebase.xcdatamodel; sourceTree = "<group>"; };
 		27CCE62E2240691A00BA9596 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateFormatters.swift; path = Services/DateFormatters.swift; sourceTree = "<group>"; };
 		27CCE63322406BBF00BA9596 /* shifts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = shifts.json; path = Resources/shifts.json; sourceTree = "<group>"; };
+		27CCE63522406D1A00BA9596 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = Services/ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				27CCE629224067EA00BA9596 /* StorageManager.swift */,
 				27CCE62B2240681B00BA9596 /* Homebase.xcdatamodeld */,
 				27CCE62E2240691A00BA9596 /* DateFormatters.swift */,
+				27CCE63522406D1A00BA9596 /* ApiManager.swift */,
 				27CCE6002240675800BA9596 /* Assets.xcassets */,
 				27CCE6052240675800BA9596 /* Info.plist */,
 			);
@@ -264,6 +267,7 @@
 				27CCE62A224067EA00BA9596 /* StorageManager.swift in Sources */,
 				27CCE62F2240691A00BA9596 /* DateFormatters.swift in Sources */,
 				27CCE62D2240681B00BA9596 /* Homebase.xcdatamodeld in Sources */,
+				27CCE63622406D1A00BA9596 /* ApiManager.swift in Sources */,
 				27CCE5FC2240675600BA9596 /* ViewController.swift in Sources */,
 				27CCE5FA2240675600BA9596 /* AppDelegate.swift in Sources */,
 			);
