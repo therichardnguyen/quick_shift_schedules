@@ -15,7 +15,7 @@ class ShiftsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseId)
+        tableView.register(ShiftTableViewCell.self, forCellReuseIdentifier: ShiftTableViewCell.reuseId)
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
@@ -32,14 +32,35 @@ class ShiftsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let object = fetchedResultsController.object(at: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShiftTableViewCell.reuseId, for: indexPath)
         prepare(cell: cell, withObject: object)
         return cell
     }
     
     func prepare(cell: UITableViewCell, withObject object: NSManagedObject?) {
-        guard let shift = object as? Shift else { return }
-        cell.textLabel?.text = "\(shift.name) \(shift.role) \(shift.color) \(shift.startDate) \(shift.endDate)"
+        guard let cell = cell as? ShiftTableViewCell, let shift = object as? Shift else { return }
+        cell.nameLabel.text = "\(shift.name ?? "") (\(shift.role ?? ""))"
+        if let colorName = shift.color {
+            var color: UIColor
+            switch colorName {
+            case "red":
+                color = UIColor.red
+            case "green":
+                color = UIColor.green
+            case "blue":
+                color = UIColor.blue
+            default:
+                color = UIColor.white
+            }
+            cell.backgroundColor = color.withAlphaComponent(0.1)
+        }
+        if let start = shift.startDate, let end = shift.endDate {
+            let beginning = Formatter.shiftList.startInterval.string(from: start)
+            let end = Formatter.shiftList.endInterval.string(from: end)
+            cell.timeLabel.text = "\(beginning)\(end)"
+        } else {
+            cell.timeLabel.text = "Invalid shift start/end times"
+        }
     }
     
     private lazy var fetchedResultsController: NSFetchedResultsController<Shift> = {
