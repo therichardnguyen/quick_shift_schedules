@@ -108,12 +108,14 @@ class NewShiftViewController: UITableViewController {
                 cell.datePicker.date = date
             }
             cell.datePicker.addTarget(self, action: #selector(updateStartDate(picker:)), for: .valueChanged)
+            shift.startDate = cell.datePicker.date
         case .endDate:
             guard let cell = cell as? DateTimeCell else { return }
             if let date = shift.endDate {
                 cell.datePicker.date = date
             }
             cell.datePicker.addTarget(self, action: #selector(updateEndDate(picker:)), for: .valueChanged)
+            shift.endDate = cell.datePicker.date
         case .employee:
             cell.textLabel?.text = shift.name
         case .shiftColor:
